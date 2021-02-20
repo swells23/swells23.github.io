@@ -1,0 +1,26 @@
+{
+  "name": "swells23.github.io",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/swells23/swells23.github.io.git"
+  },
+  "keywords": [],
+  "author": "Stephen Wells",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/swells23/swells23.github.io/issues"
+  },
+  "homepage": "https://github.com/swells23/swells23.github.io#readme",
+  "dependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-react-app": "^3.1.2",
+    "react": "^17.0.1"
+  },
+  "devDependencies": {},
+  "description": ""
+}
