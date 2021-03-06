@@ -1,12 +1,10 @@
-import React, { Component } from 'react';
+import React from 'react';
+import DefaultTemplate from '../../src/components/common/DefaultTemplate';
 
 function Homepage() {
     return (
-        <div>
-            test
-        </div>
+        <DefaultTemplate>testing</DefaultTemplate>
     )
-
 }
 
 export default Homepage;

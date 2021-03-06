@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/swells23/swells23.github.io#readme",
   "dependencies": {
+    "@material-ui/core": "^4.11.3",
     "babel-cli": "^6.26.0",
     "babel-preset-react-app": "^3.1.2",
     "next": "^10.0.7",
