@@ -1,6 +1,7 @@
 {
+  "/newPages/homepage": "pages/newPages/homepage.html",
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/newPages/homepage": "pages/newPages/homepage.js"
+  "/404": "pages/404.html"
 }

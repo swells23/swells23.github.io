@@ -1,0 +1,1 @@
+{"ast":null,"code":"import { jsx as _jsx } from \"react/jsx-runtime\";\nimport React from 'react';\nimport { DefaultTemplate } from '../../src/components/common';\n\nfunction Homepage() {\n  return /*#__PURE__*/_jsx(DefaultTemplate, {\n    headTitle: \"Home\",\n    children: \"testing\"\n  });\n}\n\nexport default Homepage;","map":null,"metadata":{},"sourceType":"module"}

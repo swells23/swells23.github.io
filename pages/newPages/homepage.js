@@ -1,9 +1,9 @@
 import React from 'react';
-import DefaultTemplate from '../../src/components/common/DefaultTemplate';
+import { DefaultTemplate } from '../../src/components/common';
 
 function Homepage() {
     return (
-        <DefaultTemplate>testing</DefaultTemplate>
+        <DefaultTemplate headTitle='Home'>testing</DefaultTemplate>
     )
 }
 
