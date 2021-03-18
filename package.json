@@ -7,7 +7,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "format": "prettier --check src/**/*.js"
+    "check-format": "prettier --check \"./src/**/*.js\"",
+    "format": "prettier --write \"./src/**/*.js\""
   },
   "repository": {
     "type": "git",
@@ -26,7 +27,8 @@
     "babel-preset-react-app": "^3.1.2",
     "next": "^10.0.7",
     "react": "^17.0.1",
-    "react-dom": "^17.0.1"
+    "react-dom": "^17.0.1",
+    "react-jss": "^10.6.0"
   },
   "devDependencies": {
     "prettier": "2.2.1"
