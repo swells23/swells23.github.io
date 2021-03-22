@@ -1,5 +1,5 @@
 import React from 'react';
-import { DefaultTemplate } from '../../src/components/common';
+import { DefaultTemplate } from '../src/components/common';
 
 function Homepage() {
     return (

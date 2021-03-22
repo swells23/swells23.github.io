@@ -2,17 +2,17 @@ export const PAGELIST = [
     {
         id: 'homepage',
         title: 'Home',
-        route: '/newPages/homepage'
+        route: '/'
     },
     {
         id: 'projects',
         title: 'Projects',
-        route: '/newPages/projects'
+        route: '/projects'
     },
     {
         id: 'contact',
         title: 'Contact',
-        route: '/newPages/contact'
+        route: '/contact'
     }
 
 ]
