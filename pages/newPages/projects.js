@@ -1,10 +1,10 @@
 import React from 'react';
 import { DefaultTemplate } from '../../src/components/common';
 
-function Homepage() {
+function Projects() {
     return (
-        <DefaultTemplate headTitle='Home' />
+        <DefaultTemplate headTitle='Projects' />
     )
 }
 
-export default Homepage;
+export default Projects;

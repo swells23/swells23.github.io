@@ -1,22 +1,35 @@
-import { Box, Grid } from '@material-ui/core';
-import Link from 'next/link'
+import { Box, Grid, Typography } from '@material-ui/core';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
 import React from 'react';
 import { createUseStyles } from 'react-jss';
+import { PAGELIST } from '../../../../data/templateMeta';
 
 const GlobalNav = () => {
-  const classes = styles();
+  const classes = styles(),
+    router = useRouter(),
+    homepageRef = PAGELIST.find(page => page.id === 'homepage').route,
+    getMenuItems = () => {
+      return PAGELIST.map(page => {
+        return (
+          <li key={page.id} className={router.pathname === page.route ? classes.active : undefined}>
+            <Link href={page.route}>
+              <Typography variant='h6' component='p' className={classes.tempTypographyMain}>{page.title}</Typography>
+            </Link>
+          </li>
+        )
+      });
+    }
 
   return (
     <Box component='header' className={classes.root}>
       <Grid container alignItems='center'>
-        <Link href='/newPages/homepage'>
-          swells23
+        <Link href={homepageRef}>
+          <Typography variant='h5' component='p' className={classes.tempTypographyLogo}>swells23</Typography>
         </Link>
         <nav className={classes.navMenu}>
           <ul>
-            <li><Link href='/newPages/homepage'>Home</Link></li>
-            <li><Link href='/newPages/projects'>Projects</Link></li>
-            <li><Link href='/newPages/contact'>Contact</Link></li>
+            {getMenuItems()}
           </ul>
         </nav>
       </Grid>
@@ -26,12 +39,45 @@ const GlobalNav = () => {
 
 const styles = createUseStyles({
   root: {
-    backgroundColor: '#5c5c5c'
+    backgroundColor: '#343a40',
+    height: '4rem',
+    padding: '0 2rem',
+    '& > div': {
+      height: 'inherit'
+    }
   },
   navMenu: {
-    'li': {
-      
+    height: 'inherit',
+    '& ul': {
+      height: 'inherit',
+      margin: 0
+    },
+    '& ul > li': {
+      alignItems: 'center',
+      cursor: 'pointer',
+      display: 'inline-flex',
+      height: 'inherit',
+      justifyContent: 'center',
+      padding: '0 1rem',
+      '&:hover': {
+        borderBottom: '2px solid #e1e1e1',
+        '& $tempTypographyMain': {
+          color: '#e1e1e1'
+        }
+      }
     }
+  },
+  active: {
+    borderBottom: '2px solid #c7c7f7 !important',
+    '& > p': {
+      color: '#c7c7f7 !important'
+    }
+  },
+  tempTypographyMain: {
+    color: '#ffffff80'
+  },
+  tempTypographyLogo: {
+    color: '#fff'
   }
 });
 
