@@ -4,8 +4,7 @@
   "description": "Stephen's portfolio",
   "main": "index.js",
   "scripts": {
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
+    "deploy": "gatsby build && gh-pages -d public -b main",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
@@ -22,11 +21,12 @@
   "bugs": {
     "url": "https://github.com/swells23/swells23.github.io/issues"
   },
-  "homepage": "https://swells23.github.io/swells23.github.io",
+  "homepage": "https://swells23.github.io",
   "dependencies": {
     "@material-ui/core": "^4.11.3",
     "babel-cli": "^6.26.0",
     "babel-preset-react-app": "^3.1.2",
+    "gatsby": "^3.3.0",
     "next": "^10.0.7",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
