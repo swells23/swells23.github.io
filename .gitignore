@@ -1,6 +1,4 @@
 node_modules
 public
 .cache
-.next
-.DS_store
 .env

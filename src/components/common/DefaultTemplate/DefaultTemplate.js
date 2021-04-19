@@ -1,5 +1,5 @@
-import Head from 'next/head'; // get rid of this
 import React from 'react';
+import { Helmet } from "react-helmet"
 import { GlobalNav } from '../';
 
 const DefaultTemplate = (props) => {
@@ -7,10 +7,10 @@ const DefaultTemplate = (props) => {
 
   return (
     <>
-      <Head>
+      <Helmet>
         <title>{`${headTitle} | swells23's Portfolio`}</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-      </Head>
+      </Helmet>
       <div>
         <GlobalNav location={location} />
         {children}
