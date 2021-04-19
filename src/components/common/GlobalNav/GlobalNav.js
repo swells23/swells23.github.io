@@ -1,19 +1,18 @@
 import { Box, Grid, Typography } from '@material-ui/core';
-import Link from 'next/link';
-import { useRouter } from 'next/router';
+import { Link } from 'gatsby';
 import React from 'react';
 import { createUseStyles } from 'react-jss';
 import { PAGELIST } from '../../../../data/templateMeta';
 
-const GlobalNav = () => {
+const GlobalNav = props => {
   const classes = styles(),
-    router = useRouter(),
+    { location } = props,
     homepageRef = PAGELIST.find(page => page.id === 'homepage').route,
     getMenuItems = () => {
       return PAGELIST.map(page => {
         return (
-          <li key={page.id} className={router.pathname === page.route ? classes.active : undefined}>
-            <Link href={page.route}>
+          <li key={page.id} className={location.pathname === page.route ? classes.active : undefined}>
+            <Link to={page.route}>
               <Typography variant='h6' component='p' className={classes.tempTypographyMain}>{page.title}</Typography>
             </Link>
           </li>
