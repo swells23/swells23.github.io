@@ -1,22 +1,31 @@
-import Head from 'next/head';
+import PropTypes from 'prop-types';
 import React from 'react';
+import { Helmet } from 'react-helmet';
 import { GlobalNav } from '../';
 
 const DefaultTemplate = (props) => {
-  const { children, headTitle } = props;
+  const { children, headTitle, location } = props;
 
   return (
     <>
-      <Head>
+      <Helmet>
         <title>{`${headTitle} | swells23's Portfolio`}</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-      </Head>
+      </Helmet>
       <div>
-        <GlobalNav />
+        <GlobalNav location={location} />
         {children}
       </div>
     </>
   );
+};
+
+DefaultTemplate.defaultProps = {
+  headTitle: ''
+};
+
+DefaultTemplate.propTypes = {
+  headTitle: PropTypes.string
 };
 
 export default DefaultTemplate;
