@@ -4,9 +4,10 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import { createUseStyles } from 'react-jss';
 import { PAGELIST } from '../../../../data/templateMeta';
+import styles from './GlobalNav.styles';
 
 const GlobalNav = (props) => {
-  const classes = styles(),
+  const classes = createUseStyles(styles)(),
     { location } = props,
     homepageRef = PAGELIST.find((page) => page.id === 'homepage').route,
     getMenuItems = () => {
@@ -51,50 +52,6 @@ const GlobalNav = (props) => {
     </Box>
   );
 };
-
-const styles = createUseStyles({
-  root: {
-    backgroundColor: '#343a40',
-    height: '4rem',
-    padding: '0 2rem',
-    '& > div': {
-      height: 'inherit'
-    }
-  },
-  navMenu: {
-    height: 'inherit',
-    '& ul': {
-      height: 'inherit',
-      margin: 0
-    },
-    '& ul > li': {
-      alignItems: 'center',
-      cursor: 'pointer',
-      display: 'inline-flex',
-      height: 'inherit',
-      justifyContent: 'center',
-      padding: '0 1rem',
-      '&:hover': {
-        borderBottom: '2px solid #e1e1e1',
-        '& $tempTypographyMain': {
-          color: '#e1e1e1'
-        }
-      }
-    }
-  },
-  active: {
-    borderBottom: '2px solid #c7c7f7 !important',
-    '& > p': {
-      color: '#c7c7f7 !important'
-    }
-  },
-  tempTypographyMain: {
-    color: '#ffffff80'
-  },
-  tempTypographyLogo: {
-    color: '#fff'
-  }
-});
 
 GlobalNav.defaultProps = {
   location: {
