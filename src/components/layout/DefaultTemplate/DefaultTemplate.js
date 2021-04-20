@@ -1,5 +1,6 @@
+import PropTypes from 'prop-types';
 import React from 'react';
-import { Helmet } from "react-helmet"
+import { Helmet } from 'react-helmet';
 import { GlobalNav } from '../';
 
 const DefaultTemplate = (props) => {
@@ -17,6 +18,14 @@ const DefaultTemplate = (props) => {
       </div>
     </>
   );
+};
+
+DefaultTemplate.defaultProps = {
+  headTitle: ''
+};
+
+DefaultTemplate.propTypes = {
+  headTitle: PropTypes.string
 };
 
 export default DefaultTemplate;
