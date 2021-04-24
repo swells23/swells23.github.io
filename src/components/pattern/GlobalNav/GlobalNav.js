@@ -36,7 +36,7 @@ const GlobalNav = props => {
   return (
     <Box component="header" className={classes.root}>
       <Grid container alignItems="center">
-        <Link href={homepageRef}>
+        <Link to={homepageRef}>
           <Typography
             variant="h5"
             component="p"
