@@ -1,9 +1,9 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import { Helmet } from 'react-helmet';
-import { GlobalNav } from '../';
+import { GlobalNav } from '../../pattern';
 
-const DefaultTemplate = (props) => {
+const DefaultTemplate = props => {
   const { children, headTitle, location } = props;
 
   return (
