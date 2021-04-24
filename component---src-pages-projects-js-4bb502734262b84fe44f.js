@@ -1,0 +1,2 @@
+(self.webpackChunkswells23_github_io=self.webpackChunkswells23_github_io||[]).push([[853],{7744:function(e,t,l){"use strict";l.r(t);var i=l(7294),n=l(326);t.default=function(e){var t=e.location;return i.createElement(n.z,{headTitle:"Projects",location:t})}}}]);
+//# sourceMappingURL=component---src-pages-projects-js-4bb502734262b84fe44f.js.map
