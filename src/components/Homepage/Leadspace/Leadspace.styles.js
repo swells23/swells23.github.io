@@ -1,11 +1,17 @@
 const styles = {
     root: {
-        height: '200px',
-        width: '100%',
-        backgroundImage: 'url("../../../static/assets/homepage-background.jpg")',
-        backgroundPosition: 'center',
-        backgroundSize: 'cover',
-        backgroundRepeat: 'no-repeat'
+        height: 'calc(100vh - 4rem)',
+        position: 'relative'
+    },
+    heroImg: {
+        height: 'inherit'
+    },
+    heroTextWrapper: {
+        maxWidth: '16.5rem',
+        marginLeft: '10rem',
+        position: 'absolute',
+        textAlign: 'center',
+        top: '40%',
     }
 }
 

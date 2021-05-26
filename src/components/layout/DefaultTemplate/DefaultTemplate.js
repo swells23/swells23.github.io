@@ -3,9 +3,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet';
 import { GlobalNav } from '../../pattern';
 
-const DefaultTemplate = props => {
-  const { children, headTitle, location } = props;
-
+const DefaultTemplate = ({ children, headTitle, location }) => {
   return (
     <>
       <Helmet>

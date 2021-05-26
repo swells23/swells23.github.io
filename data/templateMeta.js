@@ -1,4 +1,4 @@
-export const PAGELIST = [
+const PAGELIST = [
     {
         id: 'homepage',
         title: 'Home',
@@ -14,5 +14,13 @@ export const PAGELIST = [
         title: 'Contact',
         route: '/contact'
     }
+],
+    MAIN_IMAGES = {
+        hero: {
+            path: 'homepage-background.jpg',
+            alt: 'homepage background'
+        },
+        thumbnails: [{}]
+    }
 
-]
+export { PAGELIST, MAIN_IMAGES }

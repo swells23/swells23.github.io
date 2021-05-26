@@ -6,9 +6,8 @@ import { createUseStyles } from 'react-jss';
 import { PAGELIST } from '../../../../data/templateMeta';
 import styles from './GlobalNav.styles';
 
-const GlobalNav = props => {
+const GlobalNav = ({ location }) => {
   const classes = createUseStyles(styles)(),
-    { location } = props,
     homepageRef = PAGELIST.find((page) => page.id === 'homepage').route,
     getMenuItems = () => {
       return PAGELIST.map((page) => {
