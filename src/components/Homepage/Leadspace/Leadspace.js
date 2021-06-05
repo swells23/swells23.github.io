@@ -14,7 +14,7 @@ const Leadspace = ({ data }) => {
             <GatsbyImage className={classes.heroImg} image={heroImg} alt={MAIN_IMAGES.hero.alt} objectFit='fill' />
             <div container className={classes.heroTextWrapper}>
                 <Typography variant='h4' component='p'>Stephen Wells</Typography>
-                <hr />
+                <hr className={classes.heroTextDivider} />
                 <Typography variant='h6' component='p'>Front End Web Development • UI/UX Design • Prototyping</Typography>
             </div>
         </div>

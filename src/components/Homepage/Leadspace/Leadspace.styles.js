@@ -4,6 +4,7 @@ const styles = {
         position: 'relative'
     },
     heroImg: {
+        filter: 'brightness(30%)',
         height: 'inherit'
     },
     heroTextWrapper: {
@@ -12,6 +13,11 @@ const styles = {
         position: 'absolute',
         textAlign: 'center',
         top: '40%',
+    },
+    heroTextDivider: {
+        backgroundColor: '#ffffff80',
+        borderColor: '#ffffff80',
+        borderWidth: '.5px'
     }
 }
 
