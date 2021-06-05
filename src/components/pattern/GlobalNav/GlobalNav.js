@@ -6,9 +6,8 @@ import { createUseStyles } from 'react-jss';
 import { PAGELIST } from '../../../../data/templateMeta';
 import styles from './GlobalNav.styles';
 
-const GlobalNav = props => {
+const GlobalNav = ({ location }) => {
   const classes = createUseStyles(styles)(),
-    { location } = props,
     homepageRef = PAGELIST.find((page) => page.id === 'homepage').route,
     getMenuItems = () => {
       return PAGELIST.map((page) => {
@@ -36,7 +35,7 @@ const GlobalNav = props => {
   return (
     <Box component="header" className={classes.root}>
       <Grid container alignItems="center">
-        <Link href={homepageRef}>
+        <Link to={homepageRef}>
           <Typography
             variant="h5"
             component="p"
