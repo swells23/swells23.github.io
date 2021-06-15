@@ -1,0 +1,19 @@
+@function toRem($pxValue) {
+    $remValue: ($pxValue / 16) + rem; 
+    @return $remValue;
+}
+
+// Breakpoints
+$px-sm: 320;
+$px-md: 672;
+$px-lg: 1056;
+$px-xlg: 1312;
+$px-max: 1584;
+
+:export {
+    remsm: toRem($px-sm);
+    rem-md: toRem($px-md);
+    rem-lg: toRem($px-lg);
+    rem-xlg: toRem($px-xlg);
+    rem-max: toRem($px-max);
+}
