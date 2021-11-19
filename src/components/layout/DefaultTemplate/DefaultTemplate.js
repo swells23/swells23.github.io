@@ -2,8 +2,10 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import { GlobalNav } from '../../pattern';
+import * as screens from '../../../styles/screens.module.scss';
 
 const DefaultTemplate = ({ children, headTitle, location }) => {
+
   return (
     <>
       <Helmet>
