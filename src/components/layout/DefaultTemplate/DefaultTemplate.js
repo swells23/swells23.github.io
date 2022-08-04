@@ -1,10 +1,12 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import { Helmet } from 'react-helmet';
+import { createUseStyles } from 'react-jss';
+import styles from './DefaultTemplate.styles';
 import { GlobalNav } from '../../pattern';
-import * as screens from '../../../styles/screens.module.scss';
 
 const DefaultTemplate = ({ children, headTitle, location }) => {
+  const classes = createUseStyles(styles)();
 
   return (
     <>
@@ -14,7 +16,7 @@ const DefaultTemplate = ({ children, headTitle, location }) => {
       </Helmet>
       <div>
         <GlobalNav location={location} />
-        {children}
+        <div className={classes.root}>{children}</div>
       </div>
     </>
   );

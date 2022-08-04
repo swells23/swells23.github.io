@@ -10,23 +10,23 @@ $px-lg: 1056;
 $px-xlg: 1312;
 $px-max: 1584;
 
-$rem-sm: toRem(px-sm);
-$rem-md: toRem(px-md);
-$rem-lg: toRem(px-lg);
-$rem-xlg: toRem(px-xlg);
-$rem-max: toRem(px-max);
+$rem-sm: toRem($px-sm);
+$rem-md: toRem($px-md);
+$rem-lg: toRem($px-lg);
+$rem-xlg: toRem($px-xlg);
+$rem-max: toRem($px-max);
 
 
 :export {
-    px-sm: $px-sm;
-    px-md: $px-md;
-    px-lg: $px-lg;
-    px-xlg: $px-xlg;
-    px-max: $px-max;
+    pxSm: $px-sm;
+    pxMd: $px-md;
+    pxLg: $px-lg;
+    pxXlg: $px-xlg;
+    pxMax: $px-max;
 
-    rem-sm: $rem-sm;
-    rem-md: $rem-md;
-    rem-lg: $rem-lg;
-    rem-xlg: $rem-xlg;
-    rem-max: $rem-max;
+    remSm: $rem-sm;
+    remMd: $rem-md;
+    remLg: $rem-lg;
+    remXlg: $rem-xlg;
+    remMax: $rem-max;
 }
