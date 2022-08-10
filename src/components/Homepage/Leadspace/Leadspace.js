@@ -12,10 +12,10 @@ const Leadspace = ({ data }) => {
     return (
         <div className={classes.root}>
             <GatsbyImage className={classes.heroImg} image={heroImg} alt={MAIN_IMAGES.hero.alt} objectFit='fill' />
-            <div container className={classes.heroTextWrapper}>
-                <Typography variant='h4' component='p'>Stephen Wells</Typography>
+            <div className={classes.heroTextWrapper}>
+                <Typography variant='h4' component='p' color='secondary'>Stephen Wells</Typography>
                 <hr className={classes.heroTextDivider} />
-                <Typography variant='h6' component='p'>Front End Web Development • UI/UX Design • Prototyping</Typography>
+                <Typography variant='h6' component='p' color='secondary'>Front End Web Development Raleigh, NC</Typography>
             </div>
         </div>
     );

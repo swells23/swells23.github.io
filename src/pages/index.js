@@ -16,7 +16,7 @@ export const pageQuery = graphql`
   query {
     file(relativePath: { eq: "homepage-background.jpg" }) {
       childImageSharp {
-        gatsbyImageData
+        gatsbyImageData(layout: FULL_WIDTH)
       }
     }
   }
