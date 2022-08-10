@@ -13,7 +13,7 @@ const GlobalNav = ({ location }) => {
     getMenuItems = () => {
       return PAGELIST.map(page => {
         return (
-          <Tab key={page.id} value={page.route} label={page.title} />
+          <Tab key={page.id} aria-label={page.id} value={page.route} label={page.title} />
         )
       })
     };
