@@ -1,54 +1,29 @@
-import { Box, Grid, Typography } from '@material-ui/core';
-import { Link } from 'gatsby';
+import { AppBar, Tabs, Tab } from '@material-ui/core';
+import { navigate } from 'gatsby';
 import PropTypes from 'prop-types';
 import React from 'react';
-import { createUseStyles } from 'react-jss';
 import { PAGELIST } from '../../../../data/templateMeta';
-import styles from './GlobalNav.styles';
 
 const GlobalNav = ({ location }) => {
-  const classes = createUseStyles(styles)(),
-    homepageRef = PAGELIST.find((page) => page.id === 'homepage').route,
+  const [value, setValue] = React.useState(location.pathname),
+    handleChange = (evt, newValue) => {
+      navigate(newValue);
+      setValue(newValue);
+    },
     getMenuItems = () => {
-      return PAGELIST.map((page) => {
+      return PAGELIST.map(page => {
         return (
-          <li
-            key={page.id}
-            className={
-              location.pathname === page.route ? classes.active : undefined
-            }
-          >
-            <Link to={page.route}>
-              <Typography
-                variant="h6"
-                component="p"
-                className={classes.tempTypographyMain}
-              >
-                {page.title}
-              </Typography>
-            </Link>
-          </li>
-        );
-      });
+          <Tab key={page.id} aria-label={page.id} value={page.route} label={page.title} />
+        )
+      })
     };
 
   return (
-    <Box component="header" className={classes.root}>
-      <Grid container alignItems="center">
-        <Link to={homepageRef}>
-          <Typography
-            variant="h5"
-            component="p"
-            className={classes.tempTypographyLogo}
-          >
-            swells23
-          </Typography>
-        </Link>
-        <nav className={classes.navMenu}>
-          <ul>{getMenuItems()}</ul>
-        </nav>
-      </Grid>
-    </Box>
+    <AppBar position='sticky'>
+      <Tabs component='nav' aria-label='navigation' value={value} onChange={handleChange} >
+        {getMenuItems()}
+      </Tabs>
+    </AppBar>
   );
 };
 

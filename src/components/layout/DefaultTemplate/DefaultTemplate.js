@@ -1,8 +1,8 @@
+import { ThemeProvider } from '@material-ui/core/styles';
 import PropTypes from 'prop-types';
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import { GlobalNav } from '../../pattern';
-import { ThemeProvider } from '@material-ui/core/styles';
 import { theme } from '../../../styles/theme';
 
 const DefaultTemplate = ({ children, headTitle, location }) => {
