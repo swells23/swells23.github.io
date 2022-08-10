@@ -1,6 +1,6 @@
 const styles = {
     root: {
-        height: 'calc(100vh - 4rem)',
+        height: 'calc(100vh - 3rem)',
         position: 'relative'
     },
     heroImg: {
