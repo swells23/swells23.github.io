@@ -1,4 +1,4 @@
-import { ThemeProvider } from '@material-ui/core/styles';
+import { ThemeProvider, useMediaQuery, useTheme } from '@material-ui/core';
 import PropTypes from 'prop-types';
 import React from 'react';
 import { Helmet } from 'react-helmet';
@@ -6,6 +6,9 @@ import { GlobalNav } from '../../pattern';
 import { theme } from '../../../styles/theme';
 
 const DefaultTemplate = ({ children, headTitle, location }) => {
+  const isMobile = useMediaQuery(useTheme().breakpoints.down('xs'));
+
+  console.log(theme)
   return (
     <>
       <Helmet>
@@ -13,8 +16,9 @@ const DefaultTemplate = ({ children, headTitle, location }) => {
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Helmet>
       <ThemeProvider theme={theme}>
-        <GlobalNav location={location} />
+        {!isMobile && <GlobalNav location={location} />}
         {children}
+        {isMobile && <GlobalNav location={location} />}
       </ThemeProvider>
     </>
   );

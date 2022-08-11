@@ -1,7 +1,10 @@
 const styles = {
     root: {
-        height: 'calc(100vh - 3rem)',
+        height: props => `calc(100vh - ${props.navDiff})`,
         position: 'relative'
+    },
+    mobileRoot: {
+        height: props => `calc(100vh - ${props.mobileNavDiff})`,
     },
     heroImg: {
         filter: 'brightness(30%)',
@@ -18,6 +21,6 @@ const styles = {
         borderColor: '#ffffff80',
         borderWidth: '.5px'
     }
-}
+};
 
 export default styles;
