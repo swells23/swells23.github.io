@@ -8,11 +8,10 @@ const styles = {
         height: 'inherit'
     },
     heroTextWrapper: {
-        maxWidth: '16.5rem',
-        marginLeft: '10rem',
+        padding: '0 3rem',
         position: 'absolute',
         textAlign: 'center',
-        top: '40%',
+        top: '40%'
     },
     heroTextDivider: {
         backgroundColor: '#ffffff80',
