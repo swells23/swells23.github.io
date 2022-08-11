@@ -1,24 +1,26 @@
 const styles = {
     root: {
-        height: 'calc(100vh - 3rem)',
+        height: props => `calc(100vh - ${props.navDiff})`,
         position: 'relative'
+    },
+    mobileRoot: {
+        height: props => `calc(100vh - ${props.mobileNavDiff})`,
     },
     heroImg: {
         filter: 'brightness(30%)',
         height: 'inherit'
     },
     heroTextWrapper: {
-        maxWidth: '16.5rem',
-        marginLeft: '10rem',
+        padding: '0 3rem',
         position: 'absolute',
         textAlign: 'center',
-        top: '40%',
+        top: '40%'
     },
     heroTextDivider: {
         backgroundColor: '#ffffff80',
         borderColor: '#ffffff80',
         borderWidth: '.5px'
     }
-}
+};
 
 export default styles;

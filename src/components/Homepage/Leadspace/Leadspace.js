@@ -1,24 +1,32 @@
-import { Typography } from '@material-ui/core';
+import { Grid, Typography, useMediaQuery, useTheme } from '@material-ui/core';
+import clsx from 'clsx';
 import React from 'react';
-import { createUseStyles } from 'react-jss';
+import injectSheet from 'react-jss';
 import styles from './Leadspace.styles';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import { MAIN_IMAGES } from '../../../../data/templateMeta';
 
-const Leadspace = ({ data }) => {
-    const classes = createUseStyles(styles)(),
-        heroImg = getImage(data.file);
+const Leadspace = ({ data, classes }) => {
+    const heroImg = getImage(data.file),
+        isMobile = useMediaQuery(useTheme().breakpoints.down('xs'));
 
     return (
-        <div className={classes.root}>
+        <div className={clsx(classes.root, { [classes.mobileRoot]: isMobile })}>
             <GatsbyImage className={classes.heroImg} image={heroImg} alt={MAIN_IMAGES.hero.alt} objectFit='fill' />
-            <div className={classes.heroTextWrapper}>
-                <Typography variant='h4' component='p' color='secondary'>Stephen Wells</Typography>
-                <hr className={classes.heroTextDivider} />
-                <Typography variant='h6' component='p' color='secondary'>Front End Web Development Raleigh, NC</Typography>
-            </div>
+            <Grid className={classes.heroTextWrapper} container>
+                <Grid item xs={12} sm={6} md={4}>
+                    <Typography variant='h4' component='p' color='secondary'>Stephen Wells</Typography>
+                    <hr className={classes.heroTextDivider} />
+                    <Typography variant='h6' component='p' color='secondary'>Front End Web Development Raleigh, NC</Typography>
+                </Grid>
+            </Grid>
         </div>
     );
 };
 
-export default Leadspace;
+Leadspace.defaultProps = {
+    navDiff: '3rem',
+    mobileNavDiff: '3.5rem'
+};
+
+export default injectSheet(styles)(Leadspace);

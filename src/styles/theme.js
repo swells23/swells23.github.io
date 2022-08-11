@@ -9,6 +9,13 @@ let theme = createTheme({
     secondary: {
       main: '#ffc4bd'
     }
+  },
+  overrides: {
+    MuiBottomNavigation: {
+      root: {
+        backgroundColor: '#FFCFCA'
+      }
+    }
   }
 });
 
