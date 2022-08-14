@@ -10,6 +10,7 @@ const Leadspace = ({ data, classes }) => {
     const heroImg = getImage(data.file),
         isMobile = useMediaQuery(useTheme().breakpoints.down('xs'));
 
+        console.log("DATA: ", data)
     return (
         <div className={clsx(classes.root, { [classes.mobileRoot]: isMobile })}>
             <GatsbyImage className={classes.heroImg} image={heroImg} alt={MAIN_IMAGES.hero.alt} objectFit='fill' />

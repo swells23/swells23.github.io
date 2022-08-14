@@ -1,0 +1,46 @@
+{
+    "GalleryData": [
+        {
+            "title": "Food Finder",
+            "description": "test desc",
+            "src": "food-finder.png",
+            "githubSrc": "/test"
+        },
+        {
+            "title": "Meal Share Capstone",
+            "description": "test desc",
+            "src": "meal-share.png",
+            "githubSrc": "/test"
+        },
+        {
+            "title": "E Analytics Realty",
+            "description": "test desc",
+            "src": "e-analytics-realty.png",
+            "githubSrc": "/test"
+        },
+        {
+            "title": "MyCharlotte App Redesign",
+            "description": "test desc",
+            "src": "my-charlotte.png",
+            "githubSrc": "/test"
+        },
+        {
+            "title": "Stranger Things Mockup",
+            "description": "test desc",
+            "src": "stranger-things.png",
+            "githubSrc": "/test"
+        },
+        {
+            "title": "Body Measurement Notebook",
+            "description": "test desc",
+            "src": "body-measurement.png",
+            "githubSrc": "/test"
+        },
+        {
+            "title": "Room to Grow Childcare",
+            "description": "test desc",
+            "src": "room-to-grow.png",
+            "githubSrc": "/test"
+        }
+    ]
+}

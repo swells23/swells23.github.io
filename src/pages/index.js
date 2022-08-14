@@ -14,7 +14,7 @@ function Homepage({ location, data }) {
 export default Homepage;
 export const pageQuery = graphql`
   query {
-    file(relativePath: { eq: "homepage-background.jpg" }) {
+    file(relativePath: { eq: "images/homepage-background.jpg" }) {
       childImageSharp {
         gatsbyImageData(layout: FULL_WIDTH)
       }

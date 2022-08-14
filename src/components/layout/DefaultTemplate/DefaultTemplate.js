@@ -8,7 +8,6 @@ import { theme } from '../../../styles/theme';
 const DefaultTemplate = ({ children, headTitle, location }) => {
   const isMobile = useMediaQuery(useTheme().breakpoints.down('xs'));
 
-  console.log(theme)
   return (
     <>
       <Helmet>
