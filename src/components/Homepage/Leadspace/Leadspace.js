@@ -1,9 +1,9 @@
 import { Grid, Typography, useMediaQuery, useTheme } from '@material-ui/core';
 import clsx from 'clsx';
+import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import React from 'react';
 import injectSheet from 'react-jss';
 import styles from './Leadspace.styles';
-import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import { MAIN_IMAGES } from '../../../../data/templateMeta';
 
 const Leadspace = ({ data, classes }) => {

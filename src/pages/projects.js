@@ -19,7 +19,7 @@ export const pageQuery = graphql`
         node {
           base
           childImageSharp {
-            gatsbyImageData
+            gatsbyImageData(transformOptions: {fit: FILL}, aspectRatio: 1.7778)
           }
         }
       }

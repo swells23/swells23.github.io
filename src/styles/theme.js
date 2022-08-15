@@ -2,18 +2,24 @@ import { createTheme, responsiveFontSizes } from '@material-ui/core/styles';
 
 let theme = createTheme({
   palette: {
+    type: 'dark',
     primary: {
       main: '#263238',
-      contrastText: '#ffc4bd'
+      contrastText: '#FFC4BD'
     },
     secondary: {
-      main: '#ffc4bd'
+      main: '#FFC4BD'
     }
   },
   overrides: {
     MuiBottomNavigation: {
       root: {
         backgroundColor: '#FFCFCA'
+      }
+    },
+    MuiCard: {
+      root: {
+        backgroundColor: '#263238'
       }
     }
   }
