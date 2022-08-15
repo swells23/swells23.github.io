@@ -1,46 +1,60 @@
 {
     "GalleryData": [
         {
+            "title": "Red Hat Marketplace",
+            "description": "",
+            "src": "red-hat-marketplace.png",
+            "githubSrc": "",
+            "websiteSrc": "https://marketplace.redhat.com/en-us/",
+            "prototypeSrc": ""
+        },
+        {
             "title": "Food Finder",
-            "description": "test desc",
+            "description": "",
             "src": "food-finder.png",
-            "githubSrc": "/test"
+            "githubSrc": "https://github.com/bastodd/InteractiveDesignFinal.git",
+            "websiteSrc": "https://webpages.uncc.edu/swells23/InteractiveDesignFinal/Index.html",
+            "prototypeSrc": ""
         },
         {
             "title": "Meal Share Capstone",
-            "description": "test desc",
+            "description": "",
             "src": "meal-share.png",
-            "githubSrc": "/test"
+            "githubSrc": "https://github.com/marsgs/MealShare.git",
+            "websiteSrc": "",
+            "prototypeSrc": "https://cloud.indigo.design/share/run/hgzf1qpqw2gq"
         },
         {
             "title": "E Analytics Realty",
-            "description": "test desc",
+            "description": "",
             "src": "e-analytics-realty.png",
-            "githubSrc": "/test"
-        },
-        {
-            "title": "MyCharlotte App Redesign",
-            "description": "test desc",
-            "src": "my-charlotte.png",
-            "githubSrc": "/test"
+            "githubSrc": "",
+            "websiteSrc": "https://eanalyticsrealtyraleighllc.com",
+            "prototypeSrc": ""
         },
         {
             "title": "Stranger Things Mockup",
-            "description": "test desc",
+            "description": "",
             "src": "stranger-things.png",
-            "githubSrc": "/test"
+            "githubSrc": "https://github.com/swells23/Fed-Take-Home-1.git",
+            "websiteSrc": "",
+            "prototypeSrc": ""
         },
         {
             "title": "Body Measurement Notebook",
-            "description": "test desc",
+            "description": "",
             "src": "body-measurement.png",
-            "githubSrc": "/test"
+            "githubSrc": "https://github.com/jbake101/-Group10-2--itsc3155TermProject-.git",
+            "websiteSrc": "",
+            "prototypeSrc": ""
         },
         {
             "title": "Room to Grow Childcare",
-            "description": "test desc",
+            "description": "",
             "src": "room-to-grow.png",
-            "githubSrc": "/test"
+            "githubSrc": "",
+            "websiteSrc": "https://webpages.uncc.edu/swells23/Wells-Project/index.html",
+            "prototypeSrc": ""
         }
     ]
 }

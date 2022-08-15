@@ -1,16 +1,15 @@
 import { Grid, Typography, useMediaQuery, useTheme } from '@material-ui/core';
 import clsx from 'clsx';
+import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import React from 'react';
 import injectSheet from 'react-jss';
 import styles from './Leadspace.styles';
-import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import { MAIN_IMAGES } from '../../../../data/templateMeta';
 
 const Leadspace = ({ data, classes }) => {
     const heroImg = getImage(data.file),
         isMobile = useMediaQuery(useTheme().breakpoints.down('xs'));
 
-        console.log("DATA: ", data)
     return (
         <div className={clsx(classes.root, { [classes.mobileRoot]: isMobile })}>
             <GatsbyImage className={classes.heroImg} image={heroImg} alt={MAIN_IMAGES.hero.alt} objectFit='fill' />
