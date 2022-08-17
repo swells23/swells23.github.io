@@ -4,6 +4,7 @@ import {
     CardActionArea,
     CardActions,
     CardContent,
+    Container,
     Grid,
     Typography
 } from '@material-ui/core';
@@ -62,9 +63,11 @@ const Gallery = ({ data, classes }) => {
     };
 
     return (
-        <Grid component='section' className={classes.root} container spacing={3}>
-            {getGalleryItems()}
-        </Grid>
+        <Container component='section' className={classes.root}>
+            <Grid container spacing={3}>
+                {getGalleryItems()}
+            </Grid>
+        </Container>
     );
 };
 
