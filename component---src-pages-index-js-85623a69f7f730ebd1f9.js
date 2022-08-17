@@ -1,2 +1,0 @@
-(self.webpackChunkswells23_github_io=self.webpackChunkswells23_github_io||[]).push([[678],{7704:function(e,t,l){"use strict";l.r(t);var i=l(7294),n=l(326);t.default=function(e){var t=e.location;return i.createElement(n.z,{headTitle:"Home",location:t})}}}]);
-//# sourceMappingURL=component---src-pages-index-js-85623a69f7f730ebd1f9.js.map

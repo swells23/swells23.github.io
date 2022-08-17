@@ -1,1 +1,5 @@
-{"componentChunkName":"component---src-pages-index-js","path":"/","result":{"pageContext":{}},"staticQueryHashes":[]}
+{
+    "componentChunkName": "component---src-pages-index-js",
+    "path": "/",
+    "result": {"data":{"file":{"childImageSharp":{"gatsbyImageData":{"layout":"fullWidth","backgroundColor":"#080808","images":{"fallback":{"src":"/static/2eb9627ce88c46384ca09cd541c51931/5267c/homepage-background.jpg","srcSet":"/static/2eb9627ce88c46384ca09cd541c51931/7284f/homepage-background.jpg 750w,\n/static/2eb9627ce88c46384ca09cd541c51931/29ba9/homepage-background.jpg 1080w,\n/static/2eb9627ce88c46384ca09cd541c51931/c8896/homepage-background.jpg 1366w,\n/static/2eb9627ce88c46384ca09cd541c51931/5267c/homepage-background.jpg 1920w","sizes":"100vw"},"sources":[{"srcSet":"/static/2eb9627ce88c46384ca09cd541c51931/57584/homepage-background.webp 750w,\n/static/2eb9627ce88c46384ca09cd541c51931/984df/homepage-background.webp 1080w,\n/static/2eb9627ce88c46384ca09cd541c51931/4a276/homepage-background.webp 1366w,\n/static/2eb9627ce88c46384ca09cd541c51931/9c00f/homepage-background.webp 1920w","type":"image/webp","sizes":"100vw"}]},"width":1,"height":0.6666666666666666}}}},"pageContext":{}},
+    "staticQueryHashes": []}
