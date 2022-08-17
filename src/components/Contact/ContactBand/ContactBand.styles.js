@@ -10,7 +10,7 @@ const styles = {
         color: '#FFC4BD',
         margin: '2rem 0'
     },
-    downloadBtnWrapper: {
+    viewResumeWrapper: {
         textAlign: 'center'
     }
 }

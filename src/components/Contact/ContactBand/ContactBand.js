@@ -5,6 +5,7 @@ import styles from './ContactBand.styles';
 import { MAIN_IMAGES } from '../../../../data/templateMeta';
 
 const ContactBand = ({ classes }) => {
+    const resumeLink = '../../../../data/resume';
 
     return (
         <Container component='section' className={classes.root}>
@@ -28,8 +29,15 @@ const ContactBand = ({ classes }) => {
                         </Typography>
                     </Paper>
                 </Grid>
-                <Grid className={classes.downloadBtnWrapper} item xs={12}>
-                    <Button variant='contained' color='secondary' size='large'>Download Resume</Button>
+                <Grid className={classes.viewResumeWrapper} item xs={12}>
+                    <Button
+                        variant='contained'
+                        color='secondary'
+                        size='large'
+                        href='../../../../data/resume.pdf'
+                        target='_blank'>
+                        Download Resume
+                    </Button>
                 </Grid>
             </Grid>
         </Container>
