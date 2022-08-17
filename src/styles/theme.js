@@ -14,10 +14,15 @@ let theme = createTheme({
   overrides: {
     MuiBottomNavigation: {
       root: {
-        backgroundColor: '#FFCFCA'
+        backgroundColor: '#263238'
       }
     },
     MuiCard: {
+      root: {
+        backgroundColor: '#263238'
+      }
+    },
+    MuiPaper: {
       root: {
         backgroundColor: '#263238'
       }
