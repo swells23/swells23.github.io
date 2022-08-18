@@ -3,7 +3,7 @@ import React from 'react';
 import { DefaultTemplate } from '../components/layout';
 import { Leadspace } from '../components/Homepage';
 
-function Homepage({ location, data }) {
+function Homepage({ data, location }) {
   return (
     <DefaultTemplate headTitle='Home' location={location}>
       <Leadspace data={data} />

@@ -3,7 +3,7 @@ import React from 'react';
 import { DefaultTemplate } from '../components/layout';
 import { Gallery } from '../components/Projects';
 
-function Projects({ location, data }) {
+function Projects({ data, location }) {
   return (
     <DefaultTemplate headTitle="Projects" location={location}>
       <Gallery data={data} />

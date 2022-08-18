@@ -1,6 +1,7 @@
 const styles = {
     root: {
-        padding: '2rem 0'
+        paddingTop: '2rem',
+        paddingBottom: '2rem'
     },
     githubBtn: {
         '&.MuiButtonBase-root': {

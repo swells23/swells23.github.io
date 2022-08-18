@@ -10,7 +10,7 @@ import {
 import { navigate } from 'gatsby';
 import PropTypes from 'prop-types';
 import React from 'react';
-import { PAGELIST } from '../../../../data/templateMeta';
+import { PAGELIST } from '../../../data/templateMeta';
 
 const GlobalNav = ({ location }) => {
   const [value, setValue] = React.useState(location.pathname),

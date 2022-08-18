@@ -1,14 +1,14 @@
-import { Grid, Typography, useMediaQuery, useTheme } from '@material-ui/core';
+import { Grid, Typography, makeStyles, useMediaQuery, useTheme } from '@material-ui/core';
 import clsx from 'clsx';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import React from 'react';
-import injectSheet from 'react-jss';
 import styles from './Leadspace.styles';
-import { MAIN_IMAGES } from '../../../../data/templateMeta';
+import { MAIN_IMAGES } from '../../../data/templateMeta';
 
-const Leadspace = ({ data, classes }) => {
+const Leadspace = ({ data, ...props }) => {
     const heroImg = getImage(data.file),
-        isMobile = useMediaQuery(useTheme().breakpoints.down('xs'));
+        isMobile = useMediaQuery(useTheme().breakpoints.down('xs')),
+        classes = makeStyles(styles(props))();
 
     return (
         <div className={clsx(classes.root, { [classes.mobileRoot]: isMobile })}>
@@ -29,4 +29,4 @@ Leadspace.defaultProps = {
     mobileNavDiff: '3.5rem'
 };
 
-export default injectSheet(styles)(Leadspace);
+export default Leadspace;

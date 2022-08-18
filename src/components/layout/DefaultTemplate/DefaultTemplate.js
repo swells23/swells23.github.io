@@ -1,14 +1,14 @@
-import { ThemeProvider, useMediaQuery, useTheme } from '@material-ui/core';
+import { makeStyles, ThemeProvider, useMediaQuery, useTheme } from '@material-ui/core';
 import PropTypes from 'prop-types';
 import React from 'react';
-import injectSheet from 'react-jss';
 import { Helmet } from 'react-helmet';
 import { GlobalNav } from '../../pattern';
 import { theme } from '../../../styles/theme';
 import styles from './DefaultTemplate.styles';
 
-const DefaultTemplate = ({ children, classes, headTitle, location }) => {
-  const isMobile = useMediaQuery(useTheme().breakpoints.down('xs'));
+const DefaultTemplate = ({ children, headTitle, location }) => {
+  const isMobile = useMediaQuery(useTheme().breakpoints.down('xs')),
+    classes = makeStyles(styles)();
 
   return (
     <>
@@ -44,4 +44,4 @@ DefaultTemplate.propTypes = {
   headTitle: PropTypes.string
 };
 
-export default injectSheet(styles)(DefaultTemplate);
+export default DefaultTemplate;

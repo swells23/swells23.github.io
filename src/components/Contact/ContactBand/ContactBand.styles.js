@@ -1,14 +1,17 @@
 const styles = {
     root: {
-        padding: '2rem 0'
+        paddingTop: '2rem',
+        paddingBottom: '2rem'
     },
     paper: {
-        margin: '0 2rem',
+        marginLeft: '2rem',
+        marginRight: '2rem',
         padding: '1rem'
     },
     contactRefWrapper: {
         color: '#FFC4BD',
-        margin: '2rem 0'
+        marginTop: '2rem',
+        marginBottom: '2rem'
     },
     viewResumeWrapper: {
         textAlign: 'center'
