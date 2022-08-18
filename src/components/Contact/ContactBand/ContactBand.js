@@ -1,18 +1,17 @@
-import { Button, Container, Grid, Paper, Typography } from '@material-ui/core';
+import { Button, Container, Grid, makeStyles, Paper, Typography } from '@material-ui/core';
 import React from 'react';
-import injectSheet from 'react-jss';
 import styles from './ContactBand.styles';
-import { MAIN_IMAGES } from '../../../../data/templateMeta';
 
-const ContactBand = ({ classes }) => {
-    const resumeLink = '../../../../data/resume';
+const ContactBand = ({ data }) => {
+    const classes = makeStyles(styles)(),
+        resumeRef = data.allFile.edges[0].node.publicURL;
 
     return (
         <Container component='section' className={classes.root}>
             <Typography variant='h3' component='h1' color='primary' gutterBottom>Get in touch</Typography>
             <Typography variant='h6' component='h2' color='primary' gutterBottom>This is how you can reach me.</Typography>
-            <hr class={classes.contactRefWrapper} />
-            <Grid className={classes.contactRefWrapper} container spacing={6}>
+            <hr className={classes.contactRefWrapper} />
+            <Grid className={classes.contactRefWrapper} container spacing={4}>
                 <Grid item xs={12} sm={6}>
                     <Paper className={classes.paper}>
                         <Typography align='center'>
@@ -34,7 +33,7 @@ const ContactBand = ({ classes }) => {
                         variant='contained'
                         color='secondary'
                         size='large'
-                        href='../../../../data/resume.pdf'
+                        href={resumeRef}
                         target='_blank'>
                         Download Resume
                     </Button>
@@ -44,4 +43,4 @@ const ContactBand = ({ classes }) => {
     );
 };
 
-export default injectSheet(styles)(ContactBand);
+export default ContactBand;
