@@ -1,5 +1,6 @@
 module.exports = {
     plugins: [
+        'gatsby-plugin-default-template',
         {
             resolve: `gatsby-source-filesystem`,
             options: {

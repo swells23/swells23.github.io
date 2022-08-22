@@ -1,13 +1,13 @@
 import { graphql } from 'gatsby';
 import React from 'react';
-import { DefaultTemplate } from '../components/layout';
+// import { DefaultTemplate } from '../components/layout';
 import { ContactBand } from '../components/Contact';
 
 function Contact({ data, location }) {
   return (
-    <DefaultTemplate headTitle="Contact" location={location}>
+    // <DefaultTemplate headTitle="Contact" location={location}>
       <ContactBand data={data} />
-    </DefaultTemplate>
+    // </DefaultTemplate>
   );
 }
 
