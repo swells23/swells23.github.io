@@ -1,13 +1,13 @@
 import { graphql } from 'gatsby';
 import React from 'react';
-// import { DefaultTemplate } from '../components/layout';
-import { Gallery } from '../components/Projects';
+import DefaultTemplate from '../components/layout/DefaultTemplate';
+import Gallery from '../components/Gallery';
 
 function Projects({ data, location }) {
   return (
-    // <DefaultTemplate headTitle="Projects" location={location}>
+    <DefaultTemplate page='Projects' location={location}>
       <Gallery data={data} />
-    // </DefaultTemplate>
+    </DefaultTemplate>
   );
 }
 

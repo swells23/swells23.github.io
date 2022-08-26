@@ -3,6 +3,9 @@ const styles = {
         paddingTop: '2rem',
         paddingBottom: '2rem'
     },
+    sourceBtn: {
+        color: '#F5F5F5'
+    },
     githubBtn: {
         '&.MuiButtonBase-root': {
             backgroundColor: '#9933FF',

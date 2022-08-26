@@ -1,11 +1,12 @@
-const styles = (props) => {
+const getStyles = ({ theme, props }) => {
     return ({
         root: {
             height: `calc(100vh - ${props.navDiff})`,
-            position: 'relative'
-        },
-        mobileRoot: {
-            height: `calc(100vh - ${props.mobileNavDiff})`,
+            position: 'relative',
+            [theme.breakpoints.down('sm')]: {
+                height: `calc(100vh - ${props.mobileNavDiff})`
+            }
+
         },
         heroImg: {
             filter: 'brightness(30%)',
@@ -25,4 +26,4 @@ const styles = (props) => {
     })
 };
 
-export default styles;
+export default getStyles;

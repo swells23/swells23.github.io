@@ -1,13 +1,13 @@
 import { graphql } from 'gatsby';
 import React from 'react';
-// import { DefaultTemplate } from '../components/layout';
-import { Leadspace } from '../components/Homepage';
+import DefaultTemplate from '../components/layout/DefaultTemplate';
+import Hero from '../components/Hero';
 
 function Homepage({ data, location }) {
   return (
-    // <DefaultTemplate headTitle='Home' location={location}>
-      <Leadspace data={data} />
-    // </DefaultTemplate>
+    <DefaultTemplate page='Home' location={location}>
+      <Hero data={data} />
+    </DefaultTemplate>
   );
 }
 
