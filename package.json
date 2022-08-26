@@ -6,6 +6,8 @@
   "scripts": {
     "deploy": "gatsby build && gh-pages -d public -b main",
     "dev": "gatsby develop",
+    "build": "gatsby build",
+    "serve": "gatsby serve",
     "check-format": "prettier --check \"./src/**/*.js\"",
     "format": "prettier --write \"./src/**/*.js\""
   },
@@ -21,10 +23,12 @@
   },
   "homepage": "https://swells23.github.io",
   "dependencies": {
-    "@material-ui/core": "^4.12.3",
+    "@emotion/react": "^11.10.0",
+    "@emotion/styled": "^11.10.0",
+    "@mui/material": "^5.10.2",
+    "@mui/system": "^5.10.2",
     "babel-cli": "^6.26.0",
     "babel-preset-react-app": "^3.1.2",
-    "clsx": "^1.2.1",
     "gatsby": "^3.14.6",
     "gatsby-plugin-image": "^1.14.2",
     "gatsby-plugin-react-helmet": "^4.14.0",

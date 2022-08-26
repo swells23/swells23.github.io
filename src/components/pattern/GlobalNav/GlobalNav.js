@@ -6,7 +6,7 @@ import {
   Tabs,
   useMediaQuery,
   useTheme
-} from '@material-ui/core';
+} from '@mui/material';
 import { navigate } from 'gatsby';
 import PropTypes from 'prop-types';
 import React from 'react';
@@ -14,7 +14,7 @@ import { PAGELIST } from '../../../data/templateMeta';
 
 const GlobalNav = ({ location }) => {
   const [value, setValue] = React.useState(location.pathname),
-    isMobile = useMediaQuery(useTheme().breakpoints.down('xs')),
+    isMobile = useMediaQuery(useTheme().breakpoints.down('sm')),
     handleChange = (evt, newValue) => {
       navigate(newValue);
       setValue(newValue);
@@ -41,7 +41,14 @@ const GlobalNav = ({ location }) => {
     )
     : (
       <AppBar position='sticky'>
-        <Tabs component='nav' aria-label='navigation' value={value} onChange={handleChange} >
+        <Tabs
+          component='nav'
+          aria-label='navigation'
+          value={value}
+          onChange={handleChange}
+          textColor='inherit'
+          indicatorColor='secondary'
+        >
           {getMenuItems()}
         </Tabs>
       </AppBar>

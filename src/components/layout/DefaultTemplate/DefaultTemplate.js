@@ -1,47 +1,42 @@
-import { makeStyles, ThemeProvider, useMediaQuery, useTheme } from '@material-ui/core';
+import { Box, useMediaQuery, useTheme } from '@mui/material';
 import PropTypes from 'prop-types';
 import React from 'react';
 import { Helmet } from 'react-helmet';
-import { GlobalNav } from '../../pattern';
-import { theme } from '../../../styles/theme';
+import GlobalNav from '../../pattern/GlobalNav';
 import styles from './DefaultTemplate.styles';
 
-const DefaultTemplate = ({ children, headTitle, location }) => {
-  const isMobile = useMediaQuery(useTheme().breakpoints.down('xs')),
-    classes = makeStyles(styles)();
+const DefaultTemplate = ({ children, page, location }) => {
+  const isMobile = useMediaQuery(useTheme().breakpoints.down('sm')),
+    pageTitle = page && `${page} | `;
 
   return (
     <>
       <Helmet>
-        <title>{`${headTitle} | swells23's Portfolio`}</title>
-        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <title>{`${pageTitle}swells23's Portfolio`}</title>
+        <meta name='viewport' content='initial-scale=1, width=device-width' />
       </Helmet>
-      <ThemeProvider theme={theme}>
-        {!isMobile && (
-          <>
-            <GlobalNav location={location} />
-            {children}
-          </>
-        )}
-
-        {isMobile && (
-          <div className={classes.mobileWrapper}>
-            {children}
-            <GlobalNav location={location} />
-          </div>
-        )}
-
-      </ThemeProvider>
+      {!isMobile && (
+        <>
+          <GlobalNav location={location} />
+          {children}
+        </>
+      )}
+      {isMobile && (
+        <Box sx={styles.mobileWrapper}>
+          {children}
+          <GlobalNav location={location} />
+        </Box>
+      )}
     </>
   );
 };
 
 DefaultTemplate.defaultProps = {
-  headTitle: ''
+  page: ''
 };
 
 DefaultTemplate.propTypes = {
-  headTitle: PropTypes.string
+  page: PropTypes.string
 };
 
 export default DefaultTemplate;
