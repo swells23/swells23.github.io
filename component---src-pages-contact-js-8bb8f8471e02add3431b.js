@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunkswells23_github_io=self.webpackChunkswells23_github_io||[]).push([[501],{5160:function(t,e,n){n.r(e),n.d(e,{default:function(){return i}});var a=n(7294),u=n(6042);var i=function(t){t.data;var e=t.location;return a.createElement(u.z,{headTitle:"Contact",location:e})}}}]);
-//# sourceMappingURL=component---src-pages-contact-js-8bb8f8471e02add3431b.js.map
