@@ -2,7 +2,7 @@
     "GalleryData": [
         {
             "title": "Red Hat Marketplace",
-            "description": "",
+            "description": "An IBM-developed open cloud marketplace for enterprises to discover, try, purchase, deploy, and manage certified software",
             "src": "red-hat-marketplace.png",
             "githubSrc": "",
             "websiteSrc": "https://marketplace.redhat.com/en-us/",
@@ -10,7 +10,7 @@
         },
         {
             "title": "Food Finder",
-            "description": "",
+            "description": "Find restauran",
             "src": "food-finder.png",
             "githubSrc": "https://github.com/bastodd/InteractiveDesignFinal.git",
             "websiteSrc": "https://webpages.uncc.edu/swells23/InteractiveDesignFinal/Index.html",
