@@ -3,8 +3,12 @@ import { jsx } from '@emotion/react';
 import { Button, Container, Grid, Paper, Typography } from '@mui/material';
 import styles from './ContactBand.styles';
 
-const ContactBand = ({ data }) => {
-    const resumeRef = data.allFile.edges[0].node.publicURL;
+interface Data {
+    readonly allFile: any
+}
+
+const ContactBand = ({ data }: { data: Data }) => {
+    const resumeRef: string = data.allFile?.edges[0]?.node?.publicURL;
 
     return (
         <Container component='section' sx={styles.root}>
@@ -28,16 +32,18 @@ const ContactBand = ({ data }) => {
                         </Typography>
                     </Paper>
                 </Grid>
-                <Grid sx={styles.viewResumeWrapper} item xs={12}>
-                    <Button
-                        variant='contained'
-                        color='secondary'
-                        size='large'
-                        href={resumeRef}
-                        target='_blank'>
-                        Download Resume
-                    </Button>
-                </Grid>
+                {resumeRef && (
+                    <Grid sx={styles.viewResumeWrapper} item xs={12}>
+                        <Button
+                            variant='contained'
+                            color='secondary'
+                            size='large'
+                            href={resumeRef}
+                            target='_blank'>
+                            Download Resume
+                        </Button>
+                    </Grid>
+                )}
             </Grid>
         </Container>
     );
