@@ -1,4 +1,11 @@
-node_modules
-public
 .cache
 .env
+
+# Build
+public
+
+# Dependencies
+node_modules
+
+# Built ts files
+dist
