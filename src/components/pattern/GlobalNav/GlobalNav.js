@@ -23,7 +23,8 @@ import { PAGELIST } from '../../../data/templateMeta';
 import styles from './GlobalNav.styles';
 
 const GlobalNav = ({ location }) => {
-  const [value, setValue] = React.useState(location.pathname),
+  const pathname = location.pathname.match(/^\/\w*/)?.[0], // Ensures no trailing special characters
+    [value, setValue] = React.useState(pathname),
     [mobileOpen, setMobileOpen] = React.useState(false),
     handleChange = (evt, newValue) => {
       navigate(newValue);
@@ -66,6 +67,7 @@ const GlobalNav = ({ location }) => {
               <MenuIcon fontSize='large' />
             </IconButton>
           </Box>
+          {console.log(value)}
           <Tabs
             sx={styles.tabs}
             component='nav'
