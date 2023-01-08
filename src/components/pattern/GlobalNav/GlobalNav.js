@@ -1,14 +1,21 @@
 import {
   AppBar,
-  BottomNavigation,
-  BottomNavigationAction,
+  Box,
+  Container,
+  Divider,
+  Drawer,
+  IconButton,
   Link,
+  List,
+  ListItem,
+  ListItemButton,
+  ListItemText,
   Tab,
   Tabs,
-  Toolbar,
-  useMediaQuery,
-  useTheme
+  Toolbar
 } from '@mui/material';
+import HubIcon from '@mui/icons-material/Hub';
+import MenuIcon from '@mui/icons-material/Menu';
 import OpenInNewIcon from '@mui/icons-material/OpenInNew';
 import { navigate } from 'gatsby';
 import PropTypes from 'prop-types';
@@ -18,56 +25,87 @@ import styles from './GlobalNav.styles';
 
 const GlobalNav = ({ location }) => {
   const [value, setValue] = React.useState(location.pathname),
-    isMobile = useMediaQuery(useTheme().breakpoints.down('sm')),
+    [mobileOpen, setMobileOpen] = React.useState(false),
     handleChange = (evt, newValue) => {
       navigate(newValue);
       setValue(newValue);
     },
+    handleDrawerToggle = () => {
+      setMobileOpen((prevState) => !prevState);
+    },
     getMenuItems = () => {
-      const Component = isMobile ? BottomNavigationAction : Tab;
-
       return PAGELIST.map(page => {
-        return <Component key={page.id} aria-label={page.id} value={page.route} label={page.title} />
+        return <Tab key={page.id} aria-label={page.id} value={page.route} label={page.title} />
+      })
+    },
+    getDrawerItems = () => {
+      return PAGELIST.map(page => {
+        return (
+          <ListItem key={page.id}>
+            <ListItemButton sx={{ textAlign: 'center' }} href={page.route}>
+              <ListItemText primary={page.title} primaryTypographyProps={{ color: 'secondary' }} />
+            </ListItemButton>
+          </ListItem>
+        )
       })
     };
 
-  return isMobile ?
-    (
-      <BottomNavigation
-        component='nav'
-        aria-label='navigation'
-        value={value}
-        onChange={handleChange}
-        showLabels
-      >
-        {getMenuItems()}
-      </BottomNavigation>
-    )
-    : (
-      <AppBar position='sticky'>
-        <Toolbar sx={styles.toolbar}>
-          <Tabs
-            component='nav'
-            aria-label='navigation'
-            value={value}
-            onChange={handleChange}
-            textColor='inherit'
-            indicatorColor='secondary'
-            sx={styles.tabs}
-          >
-            {getMenuItems()}
-          </Tabs>
-          <Link
-            href='https://github.com/swells23/swells23.github.io'
-            color='secondary'
-            underline='hover'
-            target='_blank'>
-            View Repository
-              <OpenInNewIcon sx={styles.repoLink} />
-          </Link>
-        </Toolbar>
+  return (
+    <>
+      <AppBar position='static'>
+        <Container>
+          <Toolbar sx={styles.toolbar}>
+            <Box sx={styles.mobileNavToggleIcon}>
+              <IconButton
+                aria-label='toggle mobile navigation'
+                color='secondary'
+                onClick={handleDrawerToggle}
+              >
+                <MenuIcon fontSize='large' />
+              </IconButton>
+            </Box>
+            <Tabs
+              sx={styles.tabs}
+              component='nav'
+              aria-label='navigation'
+              value={value}
+              onChange={handleChange}
+              textColor='inherit'
+              indicatorColor='secondary'
+            >
+              {getMenuItems()}
+            </Tabs>
+            <Link
+              aria-label='open repository'
+              href='https://github.com/swells23/swells23.github.io'
+              color='secondary'
+              underline='hover'
+              target='_blank'>
+              View Repository
+              <OpenInNewIcon sx={styles.repoLinkIcon} />
+            </Link>
+          </Toolbar>
+        </Container>
       </AppBar>
-    );
+      <Box component='nav' aria-label='mobile navigation'>
+        <Drawer
+          sx={styles.drawer}
+          open={mobileOpen}
+          onClose={handleDrawerToggle}
+          ModalProps={{
+            keepMounted: true
+          }}
+        >
+          <Box onClick={handleDrawerToggle} sx={styles.drawerBox}>
+            <HubIcon sx={styles.drawerIcon} color='secondary' fontSize='large' />
+            <Divider />
+            <List>
+              {getDrawerItems()}
+            </List>
+          </Box>
+        </Drawer>
+      </Box></>
+  );
 };
 
 GlobalNav.defaultProps = {

@@ -24,8 +24,9 @@ const Hero = ({ classes, data, ...props }) => {
 };
 
 Hero.defaultProps = {
+    // TEMPORARY
     navDiff: '3rem',
-    mobileNavDiff: '3.5rem'
+    mobileNavDiff: '3.2rem'
 };
 
 export default Hero;
