@@ -41,8 +41,8 @@ const Gallery = ({ data }) => {
                         <CardActions>
                             {item.githubSrc && (
                                 <Button
-                                    size='small'
                                     sx={[styles.sourceBtn, styles.githubBtn]}
+                                    size='small'
                                     href={item.githubSrc}
                                     target='_blank'
                                     aria-label={`${item.title} github`}>
@@ -51,8 +51,8 @@ const Gallery = ({ data }) => {
                             )}
                             {item.websiteSrc && (
                                 <Button
-                                    size='small'
                                     sx={[styles.sourceBtn, styles.websiteBtn]}
+                                    size='small'
                                     href={item.websiteSrc}
                                     target='_blank'
                                     aria-label={`${item.title} website`}>
@@ -61,8 +61,8 @@ const Gallery = ({ data }) => {
                             )}
                             {item.prototypeSrc && (
                                 <Button
-                                    size='small'
                                     sx={[styles.sourceBtn, styles.prototypeBtn]}
+                                    size='small'
                                     href={item.prototypeSrc}
                                     target='_blank'
                                     aria-label={`${item.title} prototype`}>

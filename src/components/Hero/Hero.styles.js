@@ -3,7 +3,7 @@ const getStyles = ({ theme, props }) => {
         root: {
             height: `calc(100vh - ${props.navDiff})`,
             position: 'relative',
-            [theme.breakpoints.down('sm')]: {
+            [theme.breakpoints.down('md')]: {
                 height: `calc(100vh - ${props.mobileNavDiff})`
             }
 

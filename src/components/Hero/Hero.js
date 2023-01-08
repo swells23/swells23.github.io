@@ -16,7 +16,7 @@ const Hero = ({ classes, data, ...props }) => {
                 <Grid item xs={12} sm={6} md={4}>
                     <Typography variant='h4' component='p' color='secondary'>Stephen Wells</Typography>
                     <hr className={styles.heroTextDivider} />
-                    <Typography variant='h6' component='p' color='secondary'>Front End Web Development Raleigh, NC</Typography>
+                    <Typography variant='h6' component='p' color='secondary'>Front End Web Development<br />Raleigh, NC</Typography>
                 </Grid>
             </Grid>
         </Box>
@@ -24,8 +24,9 @@ const Hero = ({ classes, data, ...props }) => {
 };
 
 Hero.defaultProps = {
+    // TEMPORARY
     navDiff: '3rem',
-    mobileNavDiff: '3.5rem'
+    mobileNavDiff: '3.2rem'
 };
 
 export default Hero;
