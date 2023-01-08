@@ -1,7 +1,6 @@
 import {
   AppBar,
   Box,
-  Container,
   Divider,
   Drawer,
   IconButton,
@@ -34,58 +33,60 @@ const GlobalNav = ({ location }) => {
       setMobileOpen((prevState) => !prevState);
     },
     getMenuItems = () => {
-      return PAGELIST.map(page => {
-        return <Tab key={page.id} aria-label={page.id} value={page.route} label={page.title} />
-      })
-    },
-    getDrawerItems = () => {
-      return PAGELIST.map(page => {
-        return (
+      const desktopComponents = [],
+        mobileComponents = [];
+
+      PAGELIST.forEach(page => {
+        desktopComponents.push(
+          <Tab key={page.id} aria-label={page.id} value={page.route} label={page.title} />
+        );
+        mobileComponents.push(
           <ListItem key={page.id}>
-            <ListItemButton sx={{ textAlign: 'center' }} href={page.route}>
+            <ListItemButton sx={styles.mobileListItemButton} href={page.route}>
               <ListItemText primary={page.title} primaryTypographyProps={{ color: 'secondary' }} />
             </ListItemButton>
           </ListItem>
-        )
+        );
       })
-    };
+
+      return { desktop: desktopComponents, mobile: mobileComponents }
+    },
+    menuItems = getMenuItems();
 
   return (
     <>
       <AppBar position='static'>
-        <Container>
-          <Toolbar sx={styles.toolbar}>
-            <Box sx={styles.mobileNavToggleIcon}>
-              <IconButton
-                aria-label='toggle mobile navigation'
-                color='secondary'
-                onClick={handleDrawerToggle}
-              >
-                <MenuIcon fontSize='large' />
-              </IconButton>
-            </Box>
-            <Tabs
-              sx={styles.tabs}
-              component='nav'
-              aria-label='navigation'
-              value={value}
-              onChange={handleChange}
-              textColor='inherit'
-              indicatorColor='secondary'
-            >
-              {getMenuItems()}
-            </Tabs>
-            <Link
-              aria-label='open repository'
-              href='https://github.com/swells23/swells23.github.io'
+        <Toolbar sx={styles.toolbar}>
+          <Box sx={styles.mobileNavToggleIcon}>
+            <IconButton
+              aria-label='toggle mobile navigation'
               color='secondary'
-              underline='hover'
-              target='_blank'>
-              View Repository
-              <OpenInNewIcon sx={styles.repoLinkIcon} />
-            </Link>
-          </Toolbar>
-        </Container>
+              onClick={handleDrawerToggle}
+            >
+              <MenuIcon fontSize='large' />
+            </IconButton>
+          </Box>
+          <Tabs
+            sx={styles.tabs}
+            component='nav'
+            aria-label='navigation'
+            value={value}
+            onChange={handleChange}
+            textColor='inherit'
+            indicatorColor='secondary'
+          >
+            {menuItems.desktop}
+          </Tabs>
+          <Link
+            aria-label='open repository'
+            href='https://github.com/swells23/swells23.github.io'
+            color='secondary'
+            underline='hover'
+            target='_blank'>
+            View Repository
+            <OpenInNewIcon sx={styles.repoLinkIcon} />
+          </Link>
+        </Toolbar>
       </AppBar>
       <Box component='nav' aria-label='mobile navigation'>
         <Drawer
@@ -100,7 +101,7 @@ const GlobalNav = ({ location }) => {
             <HubIcon sx={styles.drawerIcon} color='secondary' fontSize='large' />
             <Divider />
             <List>
-              {getDrawerItems()}
+              {menuItems.mobile}
             </List>
           </Box>
         </Drawer>

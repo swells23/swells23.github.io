@@ -12,6 +12,9 @@ const styles = {
         display: { xs: 'flex', md: 'none' },
         flexGrow: 1
     },
+    mobileListItemButton: {
+        textAlign: 'center'
+    },
     drawer: {
         display: { xs: 'block', md: 'none' },
         '& .MuiDrawer-paper': {
