@@ -67,7 +67,6 @@ const GlobalNav = ({ location }) => {
               <MenuIcon fontSize='large' />
             </IconButton>
           </Box>
-          {console.log(value)}
           <Tabs
             sx={styles.tabs}
             component='nav'
