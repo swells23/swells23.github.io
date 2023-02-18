@@ -1,6 +1,14 @@
 {
     "GalleryData": [
         {
+            "title": "Millennial Realty & Investments",
+            "description": "",
+            "src": "millennial.png",
+            "githubSrc": "https://github.com/swells23/millennial",
+            "websiteSrc": "https://millennial.vercel.app",
+            "prototypeSrc": ""
+        },
+        {
             "title": "Red Hat Marketplace",
             "description": "",
             "src": "red-hat-marketplace.png",
