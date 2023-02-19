@@ -30,7 +30,7 @@ const Gallery = ({ data }) => {
             return (
                 <Grid item key={item.title} md={6} lg={4}>
                     <Card>
-                        <CardActionArea>
+                        <CardActionArea href={item.websiteSrc || item.prototypeSrc || item.githubSrc}>
                             <GatsbyImage image={imgSrc} alt={item.title} />
                             <CardContent>
                                 <Typography gutterBottom variant='h5' component='h2'>
