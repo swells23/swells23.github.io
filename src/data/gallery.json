@@ -2,7 +2,7 @@
     "GalleryData": [
         {
             "title": "Millennial Realty & Investments",
-            "description": "",
+            "description": "(WIP) - Real estate portfolio with headless Wordpress CMS.",
             "src": "millennial.png",
             "githubSrc": "https://github.com/swells23/millennial",
             "websiteSrc": "https://millennial.vercel.app",
@@ -10,7 +10,7 @@
         },
         {
             "title": "Red Hat Marketplace",
-            "description": "",
+            "description": "Try, purchase, deploy, and manage enterprise software across clouds.",
             "src": "red-hat-marketplace.png",
             "githubSrc": "",
             "websiteSrc": "https://marketplace.redhat.com/en-us/",
@@ -18,7 +18,7 @@
         },
         {
             "title": "Food Finder",
-            "description": "",
+            "description": "Discover restaurants in your area through our Yelp-integrated application.",
             "src": "food-finder.png",
             "githubSrc": "https://github.com/bastodd/InteractiveDesignFinal.git",
             "websiteSrc": "https://webpages.uncc.edu/swells23/InteractiveDesignFinal/Index.html",

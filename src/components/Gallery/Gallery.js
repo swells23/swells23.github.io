@@ -36,6 +36,9 @@ const Gallery = ({ data }) => {
                                 <Typography gutterBottom variant='h5' component='h2'>
                                     {item.title}
                                 </Typography>
+                                <Typography variant='body2'>
+                                    {item.description}
+                                </Typography>
                             </CardContent>
                         </CardActionArea>
                         <CardActions>
