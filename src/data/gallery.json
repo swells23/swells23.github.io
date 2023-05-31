@@ -2,10 +2,10 @@
     "GalleryData": [
         {
             "title": "Millennial Realty & Investments",
-            "description": "(WIP) - Real estate portfolio with headless Wordpress CMS.",
+            "description": "Real estate portfolio w/ Google Drive integration for managing media assets, listings, and agents.",
             "src": "millennial.png",
             "githubSrc": "https://github.com/swells23/millennial",
-            "websiteSrc": "https://millennial.vercel.app",
+            "websiteSrc": "https://millennialrealtyinvestments.com",
             "prototypeSrc": ""
         },
         {
