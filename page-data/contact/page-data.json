@@ -1,5 +1,5 @@
 {
     "componentChunkName": "component---src-pages-contact-js",
     "path": "/contact/",
-    "result": {"data":{"allFile":{"edges":[{"node":{"publicURL":"/static/0bf4d7dddfff37ae95da0de66ae0d8c6/Resume.pdf"}}]}},"pageContext":{}},
+    "result": {"data":{"allFile":{"edges":[{"node":{"publicURL":"/static/0bf4d7dddfff37ae95da0de66ae0d8c6/resume.pdf"}}]}},"pageContext":{}},
     "staticQueryHashes": []}
